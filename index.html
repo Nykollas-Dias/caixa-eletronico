@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Caixa Registradora</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Caixa Registradora</h1>
+    <span id="dataHora"></span>
+  </header>
+
+  <main>
+    <section class="lado-esquerdo">
+      <h2>Adicionar Produto</h2>
+      <input type="text" id="nomeProduto" placeholder="Ex: Café">
+      <input type="number" id="precoProduto" placeholder="0,00">
+      <input type="number" id="quantidadeProduto" value="1" min="1">
+      <button onclick="adicionarAoCarrinho()">Adicionar ao Carrinho</button>
+
+      <h3>Produtos Rápidos</h3>
+      <div class="produtos-rapidos">
+        <button onclick="produtoRapido('Café', 3.5)"> Café<br>R$ 3,50</button>
+        <button onclick="produtoRapido('Pão de Queijo', 4.0)"> Pão de Queijo<br>R$ 4,00</button>
+        <button onclick="produtoRapido('Água', 2.5)"> Água<br>R$ 2,50</button>
+        <button onclick="produtoRapido('Refrigerante', 5.0)"> Refrigerante<br>R$ 5,00</button>
+        <button onclick="produtoRapido('Sanduíche', 12.0)"> Sanduíche<br>R$ 12,00</button>
+        <button onclick="produtoRapido('Bolo', 6.5)"> Bolo<br>R$ 6,50</button>
+      </div>
+
+      <h3>Carrinho</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Produto</th><th>Preço</th><th>Qtd</th><th>Subtotal</th><th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="carrinho"></tbody>
+        <tfoot>
+          <tr><td colspan="4">Total:</td><td id="total">R$ 0,00</td></tr>
+        </tfoot>
+      </table>
+    </section>
+
+    <section class="lado-direito">
+      <div class="visor-total">R$ <span id="visorTotal">0,00</span></div>
+      <div class="cupom">
+        <h3>CUPOM FISCAL</h3>
+        <div id="cupomItens">Nenhum item adicionado</div>
+        <hr>
+        <strong>TOTAL: <span id="cupomTotal">R$ 0,00</span></strong>
+        <p>Obrigado pela preferência!<br>COD: #<span id="codigoCupom"></span></p>
+      </div>
+    </section>
+  </main>
+
+  <script src="renderer.js"></script>
+</body>
+</html>
