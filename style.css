@@ -1,0 +1,80 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background: #f5f7fa;
+  color: #333;
+}
+
+header {
+  background: #1a47c6;
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+.lado-esquerdo {
+  flex: 2;
+}
+
+.lado-direito {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+input {
+  padding: 8px;
+  margin-right: 5px;
+  width: 150px;
+}
+
+button {
+  padding: 10px;
+  background: #2563eb;
+  color: rgb(241, 241, 241);
+  border: none;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.produtos-rapidos button {
+  width: 120px;
+  height: 60px;
+  margin: 5px;
+  font-size: 14px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px;
+  text-align: center;
+}
+
+.visor-total {
+  font-size: 24px;
+  background: black;
+  color: lime;
+  padding: 15px;
+  text-align: right;
+  margin-bottom: 10px;
+  font-family: monospace;
+}
+
+.cupom {
+  font-size: 14px;
+}
